@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARVELMOVIES</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .counter {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .main-content {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+        }
+        .gallery-item {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .info-panel {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            max-width: 300px;
+        }
+        .ad-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter" id="counter">60</div>
+    <div class="main-content">
+        <div class="ad-container">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '41b248193d36880a522911972d084a13',
+                    'format' : 'iframe',
+                    'height' : 600,
+                    'width' : 160,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//punctuationbandycontradict.com/41b248193d36880a522911972d084a13/invoke.js"></script>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item" onclick="window.open('https://punctuationbandycontradict.com/p5g022ff?key=fb9a08b6bed40a09c952e0202a27705f', '_blank')">
+                <img src="images/image1.png" alt="Image 1">
+            </div>
+            <div class="gallery-item" onclick="window.open('https://punctuationbandycontradict.com/p5g022ff?key=fb9a08b6bed40a09c952e0202a27705f', '_blank')">
+                <img src="images/image2.png" alt="Image 2">
+            </div>
+            <div class="gallery-item" onclick="window.open('https://punctuationbandycontradict.com/p5g022ff?key=fb9a08b6bed40a09c952e0202a27705f', '_blank')">
+                <img src="images/image3.png" alt="Image 3">
+            </div>
+            <div class="gallery-item" onclick="window.open('https://punctuationbandycontradict.com/p5g022ff?key=fb9a08b6bed40a09c952e0202a27705f', '_blank')">
+                <img src="images/image4.png" alt="Image 4">
+            </div>
+        </div>
+        <div class="ad-container">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : 'eea733ea895f3f1fdc4d439be7242f38',
+                    'format' : 'iframe',
+                    'height' : 300,
+                    'width' : 160,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//punctuationbandycontradict.com/eea733ea895f3f1fdc4d439be7242f38/invoke.js"></script>
+        </div>
+    </div>
+    <div class="info-panel" id="infoPanel"></div>
+
+    <script>
+        // Function to generate random device info
+        function generateDeviceInfo() {
+            const devices = [
+                'iPhone 12 Pro Max',
+                'Samsung Galaxy S21',
+                'Google Pixel 6',
+                'OnePlus 9 Pro',
+                'Xiaomi Mi 11'
+            ];
+            const os = [
+                'iOS 15.4',
+                'Android 12',
+                'Android 11',
+                'iOS 14.8',
+                'Android 10'
+            ];
+            const browsers = [
+                'Chrome 98.0.4758.102',
+                'Safari 15.3',
+                'Firefox 97.0',
+                'Edge 98.0.1108.43',
+                'Opera 83.0.4254.27'
+            ];
+            
+            return {
+                device: devices[Math.floor(Math.random() * devices.length)],
+                os: os[Math.floor(Math.random() * os.length)],
+                browser: browsers[Math.floor(Math.random() * browsers.length)]
+            };
+        }
+
+        // Function to generate random geolocation
+        function generateGeolocation() {
+            const cities = [
+                { city: 'New York', country: 'USA', lat: 40.7128, lon: -74.0060 },
+                { city: 'London', country: 'UK', lat: 51.5074, lon: -0.1278 },
+                { city: 'Tokyo', country: 'Japan', lat: 35.6762, lon: 139.6503 },
+                { city: 'Sydney', country: 'Australia', lat: -33.8688, lon: 151.2093 },
+                { city: 'Berlin', country: 'Germany', lat: 52.5200, lon: 13.4050 }
+            ];
+            return cities[Math.floor(Math.random() * cities.length)];
+        }
+
+        // Function to generate random fingerprint
+        function generateFingerprint() {
+            return Math.random().toString(36).substring(2, 15) + 
+                   Math.random().toString(36).substring(2, 15);
+        }
+
+        // Function to update info panel
+        function updateInfoPanel() {
+            const deviceInfo = generateDeviceInfo();
+            const geo = generateGeolocation();
+            const fingerprint = generateFingerprint();
+            
+            document.getElementById('infoPanel').innerHTML = `
+                Device: ${deviceInfo.device}<br>
+                OS: ${deviceInfo.os}<br>
+                Browser: ${deviceInfo.browser}<br>
+                Location: ${geo.city}, ${geo.country}<br>
+                Coordinates: ${geo.lat}, ${geo.lon}<br>
+                Fingerprint: ${fingerprint}
+            `;
+        }
+
+        // Counter and refresh logic
+        let timeLeft = 60;
+        const counter = document.getElementById('counter');
+        
+        function updateCounter() {
+            timeLeft--;
+            counter.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                timeLeft = 60;
+                updateInfoPanel();
+                location.reload();
+            }
+        }
+
+        // Initial setup
+        updateInfoPanel();
+        setInterval(updateCounter, 1000);
+    </script>
+</body>
+</html> 
